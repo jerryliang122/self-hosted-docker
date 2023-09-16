@@ -1,8 +1,8 @@
 FROM ubuntu:22.04
 RUN apt-get update && apt-get install -y git git-lfs curl &&\
     mkdir actions-runner &&\
-    useradd -m github &&\
-    github:github -R /actions-runner &&\
+    useradd -m github 
+RUN github:github -R /actions-runner &&\
     echo 'github ALL= (ALL) ALL' >> /etc/sudoers
 WORKDIR /actions-runner
 COPY start.sh /actions-runner
