@@ -2,7 +2,7 @@ name: docker build
 on: push
 
 jobs:
-    gd:
+    build:
       runs-on: ubuntu-latest
       steps:
       - name: Free Disk Space (Ubuntu)
