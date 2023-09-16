@@ -7,6 +7,7 @@ if [ -z "$env_token" ]; then
   exit 1
 fi
 # 运行./config.sh命令
+sudo ./bin/installdependencies.sh
 ./config.sh --url https://github.com/jerryliang122/self-hosted-docker --token $env_token
 ./run.sh
 exit 0 
