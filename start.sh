@@ -10,5 +10,6 @@ sudo ./bin/installdependencies.sh
 #如果run.out文件不存在
 if [ ! -f "run.out" ]; then
   ./config.sh --url https://github.com/jerryliang122/self-hosted-docker --token $env_token
+  echo 1 > run.out
 ./run.sh
 exit 0 
